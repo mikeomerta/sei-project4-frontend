@@ -13,5 +13,3 @@ function BookCard({ title, author, image, bookId }) {
 }
 
 export default BookCard
-
-

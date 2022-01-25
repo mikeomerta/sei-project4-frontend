@@ -7,6 +7,7 @@ import Home from './components/common/Home'
 import BookShow from './components/books/BookShow'
 import BookIndex from './components/books/BookIndex'
 import Favourites from './components/books/Favourites'
+import AddComment from './components/AddComments'
 import Register from './auth/Register'
 import Login from './auth/Login'
 
@@ -20,7 +21,8 @@ function App() {
         <Route path = "/books/:bookId" element = {<BookShow />} />
         <Route path = "/favourites" element = {<Favourites />} />
         <Route path = "/register" element = {<Register />} />
-        <Route path = "/login" element = {<Login />} />        
+        <Route path = "/login" element = {<Login />} /> 
+        <Route path = "/books/comments" element = {<AddComment />} />        
       </Routes>
     </BrowserRouter>
   )

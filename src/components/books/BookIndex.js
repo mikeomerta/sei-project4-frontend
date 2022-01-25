@@ -1,23 +1,22 @@
 import React from 'react'
-import axios from 'axios' 
 
 import BookCard from './BookCard'
-
-
+import { getAllBooks } from '../../lib/api'
 
 function BookIndex() {
   const [books, setBooks] = React.useState([])
 
   React.useEffect(() => {
     const getData = async () => {
-      const res = await axios.get('http://localhost:3000/api/books')
-      setBooks(res.data)
+      try {
+        const res = await getAllBooks()
+        setBooks(res.data)
+      } catch (err) {
+        console.log(err)
+      }
     }
     getData()
   }, [])
-
-  console.log('books', books)
-
 
   return (
     <section>
