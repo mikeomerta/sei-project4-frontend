@@ -24,3 +24,11 @@ export function registerUser(formData) {
 export function loginUser(formData) {
   return axios.post(`${baseUrl}/login/`, formData)  
 }
+
+export function createBook(formData) {
+  return axios.post(`${baseUrl}/books/`, formData, headers())
+}
+
+export function deleteBook(bookId) {
+  return axios.delete(`${baseUrl}/books/${bookId}/`, headers())
+}

@@ -1,13 +1,13 @@
+import React from 'react'
 
-function BookShowCard({ title, author, image, comments }) {
+function BookShowCard({ title, author, image, blurb, comments }) {
   
   return (
     <div>
-      
       <h3>{title}</h3>
       <h4>{author}</h4>
       <img className="bookImage" src={image} alt={title} />
-      <h3>Comments</h3>
+      <h6>{blurb}</h6>
       {comments ?
         comments.map(comment => {
           return (

@@ -6,8 +6,8 @@
 }
 
 .bookImage {
-  max-width: 200px;
-  max-height: 400px;
+  max-width: 300px;
+  max-height: 500px;
 }
 
 .Navbar {
@@ -15,4 +15,8 @@
   display: flex;
   justify-content: space-between;
 }
-  
+
+.favouriteImage {
+  max-width: 40px;
+  max-height: 40px;
+}  

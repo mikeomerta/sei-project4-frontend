@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 
-import { setToken } from '../lib/auth'
+import { setToken, setUserId } from '../lib/auth'
 import { loginUser } from '../lib/api'
 
 function Login() {
@@ -20,7 +20,9 @@ function Login() {
     try {
       console.log(formData)
       const res = await loginUser(formData)
+      console.log(res.data)
       setToken(res.data.token)
+      setUserId(res.data.id[0])
       navigate('/books')   
     } catch (err) {
       console.log(err)
