@@ -2,21 +2,87 @@
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   text-decoration: none;
   color: black;
-  font-weight: bolder;
 }
+
+
+.home-container {
+  height: 1500px;
+  background-color: bisque;
+}
+.hero-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-size: cover;
+}
+.section{
+  
+}
+.home-title {
+  text-align: center;
+  font-size: 50px;
+  font-style: italic;  
+  font-weight: bold;
+}
+.home-defintion {
+  text-align: center;
+  font-size: 20px;
+  font-style: italic;  
+  font-weight: bold;
+  border-bottom: 1px solid gray;
+  padding: 0 0 60px 0;
+}
+.button-container {
+  text-align: center;
+  padding: 60px 0 0 0;
+  display: flex;
+  justify-content: center;
+}
+.button {
+  margin: 20px;
+}
+
+
+
+
+
+
 
 .bookImage {
-  max-width: 300px;
-  max-height: 500px;
+  width: 226px;
+  height: 346px;
+  border-radius: 5px;
+  border: black solid 1.5px;
 }
 
-.Navbar {
-  background-color: rgb(12, 151, 7);
-  display: flex;
-  justify-content: space-between;
+.navbar {
+  padding: 10px 10px 0px 10px;
+  background-color: bisque;
 }
+.logo {
+  height: 30px;
+  width: 30px;
+  margin: 3px 0 0 0;
+}
+.home, .library, .favourites {
+  padding: 5px 0 0 20px;
+  color: black;
+}
+.login, .register {
+  padding: 5px 20px 0 0; 
+  color: black;
+}
+
 
 .favouriteImage {
   max-width: 40px;
   max-height: 40px;
-}  
+} 
+
+.input {
+  width: 600px;
+}
+
+.block {
+  width: 400px;
+}

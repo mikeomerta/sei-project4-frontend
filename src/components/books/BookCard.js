@@ -4,8 +4,11 @@ function BookCard({ title, author, image, bookId }) {
   return (
     <div>
       <Link to={`/books/${bookId}`}>
-        <h3>{title}</h3>
-        <h4>{author}</h4>
+        <div className="block">
+          <h3>{title}</h3>
+          <h4><strong>{author}</strong></h4>
+        </div>
+        
         <img className="bookImage" src={image} alt={title} />
       </Link>
     </div>
