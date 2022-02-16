@@ -30,57 +30,62 @@ function Login() {
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>        
-        <div>
-          <label htmlFor="username">Username</label>
+    <div className='login-container'>
+      <div className='hero-image'>
+        <img src="https://i.imgur.com/KzjsD8w.jpg" alt="books hero"/>
+      </div> 
+      <div className='form-container'>
+        <form onSubmit={handleSubmit}>        
           <div>
-            <input 
-              className='input'
-              name="username"
-              id="username"
-              placeholder="Username"
-              onChange={handleInputChange}
-            />
-          </div>
-        </div>        
-        <div>
-          <label htmlFor="password">Password</label>
+            <label htmlFor="username" className='username-text'>Username</label>
+            <div>
+              <input 
+                className='input'
+                name="username"
+                id="username"
+                placeholder="Username"
+                onChange={handleInputChange}
+              />
+            </div>
+          </div>        
           <div>
-            <input 
-              className='input'
-              type="password"
-              name="password"
-              id="password"
-              placeholder="Password"
-              onChange={handleInputChange}
-            />
+            <label htmlFor="password" className='password-text'>Password</label>
+            <div>
+              <input 
+                className='input'
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Password"
+                onChange={handleInputChange}
+              />
+            </div>
           </div>
-        </div>
-        <div>
-          <label htmlFor="passwordConfirmation">Password Confirmation</label>
           <div>
-            <input  
-              className='input'
-              type="password"
-              name="passwordConfirmation"
-              id="passwordConfirmation"
-              placeholder="Password confirmation"
-              onChange={handleInputChange}
-            />
-          </div>
-        </div>  
-        <div htmlFor="button">
-          <button 
-            id="button"
-            className='button'
-            type="submit"
-          >Login</button>
-        </div>
-        <div>
-          <p>Already registered? <Link to="/register">Register</Link></p> 
-        </div>        
-      </form>
+            <label htmlFor="passwordConfirmation" className='password-confirmation-text'>Password Confirmation</label>
+            <div>
+              <input  
+                className='input'
+                type="password"
+                name="passwordConfirmation"
+                id="passwordConfirmation"
+                placeholder="Password confirmation"
+                onChange={handleInputChange}
+              />
+            </div>
+          </div>  
+          <div className='login-button' htmlFor="button">
+            <button 
+              id="button"
+              className='button is-black is-outlined is-rounded'
+              type="submit"
+            >Login</button>
+          </div>          
+          <div className='register-reminder'>
+            <p>Already registered? <Link to="/register">Register</Link></p> 
+          </div>        
+        </form>
+      </div>
     </div>        
   )
 }

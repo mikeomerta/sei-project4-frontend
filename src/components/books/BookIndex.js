@@ -23,22 +23,27 @@ function BookIndex() {
   const handleSearch = (e) => {
     setKeyword(e.target.value)
   }
- 
+
   return (
     <section>
-      <div className="is centered">
-        <input 
-          className="input is-rounded is-hovered"
-          placeholder='Search...' 
-          type='text'
-          id='input'
-          onChange={handleSearch}
-          value={keyword}
-        />
+      <div className='library-header'>
+        <div className='search-bar'>
+          <input 
+            className="input is-rounded is-hovered"
+            placeholder='Search...' 
+            type='text'
+            id='input'
+            onChange={handleSearch}
+            value={keyword}
+          />
+        </div>
+        <div className='book-button'>
+          <Link to="/books/create"><button className="button is-black is-rounded is-outlined">Add Book</button></Link>
+        </div>
       </div>
       <section className="section">
         <div className="container">
-          <div className="columns is-multiline is-centered" >
+          <div className="columns is-multiline is-centered">
             {books ?
               books.map(book => (
                 <BookCard 
@@ -52,13 +57,10 @@ function BookIndex() {
               :
               <h3>...loading</h3>
             }
-          </div>
+          </div>            
         </div>
-      </section>
-      <div>
-        <Link to="/books/create"><button className="button is-link is-light is-rounded">Add Book</button></Link>
-      </div>
-    </section>    
+      </section>   
+    </section>          
   )
 }
 

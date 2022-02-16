@@ -2,14 +2,16 @@ import { Link } from 'react-router-dom'
 
 function BookCard({ title, author, image, bookId }) {
   return (
-    <div>
+    <div className='book-card'>
       <Link to={`/books/${bookId}`}>
-        <div className="block">
-          <h3>{title}</h3>
-          <h4><strong>{author}</strong></h4>
-        </div>
-        
-        <img className="bookImage" src={image} alt={title} />
+        <div className="card-content">
+          <h3><em>{title}</em></h3>
+          <h4>{author}</h4>
+          <div className='card-image'>
+            <img className="bookImage" src={image} alt={title} />
+          </div>
+          
+        </div>   
       </Link>
     </div>
   )

@@ -43,15 +43,18 @@ function AddBook() {
   }
 
   return (
-    <section>
+    <section className='add-book-container'>
+      <div className='hero-image'>
+        <img src="https://i.imgur.com/KzjsD8w.jpg" alt="books hero"/>
+      </div> 
       <div>
-        <div>
+        <div className='card-block'>
           <form onSubmit={handleSubmit}>
-            <div>
-              <label htmlFor="title">Title</label>
+            <div className='formn-field'>
+              <label htmlFor="title" className='card-title-text'>Title</label>
               <div>
                 <input 
-                  className='input'
+                  className='input is-black'
                   name="title"
                   id="title"
                   placeholder="Title"
@@ -60,18 +63,18 @@ function AddBook() {
               </div>
               {formErrors.title && <p>Title is a required field</p>}
             </div>
-            <div>
-              <label htmlFor="author">Author</label>
+            <div className='form-field'>
+              <label htmlFor="author" className='card-author-text'>Author</label>
               <div>
                 <input 
-                  className='input'
+                  className='input is-black'
                   name="author"
                   id="author"
                   placeholder="Author"
                   onChange={handleTextInputChange}
                 />
               </div>
-              {formErrors.title && <p>Title is a required field</p>}
+              {formErrors.title && <p>Author is a required field</p>}
             </div>
             {isUploadingImage && <p>Image uploading</p>}
             {formData.image ?
@@ -79,8 +82,10 @@ function AddBook() {
                 <img src={formData.image} alt="uploaded primary image"/>
               </div>
               :
-              <div className="form-field">
-                <label htmlFor="image">Image</label>
+              <div className="form-field-image">
+                <label htmlFor="image" className='card-image-text'>Image</label>
+                <label htmlFor="image" className="custom-file-upload">Browse</label>
+                <input id="file-upload" type="file"/>
                 <div>
                   <input 
                     type="file"
@@ -95,8 +100,8 @@ function AddBook() {
               </div>
             }          
             <div>
-              <div>
-                <button type="submit">Submit!</button>
+              <div className='add-button'>
+                <button className='button is-black is-outlined is-rounded' type="submit">Add to the Library</button>
               </div>
             </div>
           </form>
