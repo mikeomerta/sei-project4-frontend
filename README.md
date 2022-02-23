@@ -9,7 +9,7 @@ The brief was to create a full-stack with a Django backend and a React frontend.
 
 I chose to build a book collection app. I read a lot of books and sometimes choosing the next book to read is difficult so I wanted to build a random book choice button that would decide for me what book I would read next out of my collection. This spanned an idea of having an online collection of books that you wanted to buy and read.
 
-You can see the app here.
+You can see the app [here](https://modest-kare-3eff01.netlify.app/).
 
 Please also find the Git repository for the backend [here](https://github.com/mikeomerta/sei-project4-backend)
 
